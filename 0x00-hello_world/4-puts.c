@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * Description main - prints using puts
+ * Description main - Prints out a string to stdout.
  *
- * Return:0 if Success
+ * Return: 0 if Success.
  */
 int main(void)
 {
