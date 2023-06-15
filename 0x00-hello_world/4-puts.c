@@ -1,7 +1,6 @@
 #include <stdio.h>
-
 /**
- * Description main - Prints out a string to stdout.
+ * Description main - use put to prints out a string to the output.
  *
  * Return: 0 if Success.
  */
