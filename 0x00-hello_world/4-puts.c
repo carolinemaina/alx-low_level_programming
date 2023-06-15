@@ -6,6 +6,8 @@
  */
 int main(void)
 {
+/*Print to stdout*/
 puts("\"Programming is like building a multilingual puzzle");
+/*return 0 if sucess*/
 return (0);
 }
