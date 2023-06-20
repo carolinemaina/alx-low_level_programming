@@ -8,6 +8,7 @@ int main(void)
 {
 	int letter = 97;
 	int capital = 65;
+
 	while (letter <= 122)
 	{
 		putchar(letter);
