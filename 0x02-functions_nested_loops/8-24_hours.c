@@ -2,7 +2,7 @@
 /**
  * jack_bauer -  prints every minute of the day of Jack Bauer
  *
- * Return: Always 0 (Success) 
+ * Return: Always 0 (Success)
  */
 
 void jack_bauer(void)
@@ -13,7 +13,7 @@ void jack_bauer(void)
 	{
 		for (min2 = 0; min2 <= 9; min2++)
 		{
-			if ((min1 <= 1 && min2 <= 9) || (min1 <= 2 && min2 <=3))
+			if ((min1 <= 1 && min2 <= 9) || (min1 <= 2 && min2 <= 3))
 			{
 				for (min3 = 0; min3 <= 5; min3++)
 				{
