@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * islower - checks for lowercase character
- * 
+ * _islower - checks for lowercase character
+ * c: variable for storing letter
  * Return:Returns 1 if c is lowercase 0 otherwise
  */
 
