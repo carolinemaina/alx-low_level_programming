@@ -3,17 +3,17 @@
 /**
  * print_numbers - prints the numbers, from 0 to 9
  *
- *
- * Return: the multiplication of a and b
+ * Return: the result
  */
 
 void print_numbers(void)
 {
-	int num;
+	int a;
 
-	for (num = 0; num <= 9; num++)
+	for (a = 0; a <= 9; a++)
+
 	{
-		_putchar(num + '0');
+		_putchar(a + '0');
 	}
 	_putchar('\n');
 }
