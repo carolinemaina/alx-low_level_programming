@@ -6,7 +6,7 @@
  * @s: string
  * Return: converted string
  */
-int atoi(char *s)
+int _atoi(char *s)
 {
 	int length = 0;
 	int num = 0;
@@ -57,11 +57,11 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	numa = atoi(argv[1]);
-	numb = atoi(argv[2]);
-	mult = numa * numb;
+	numa = _atoi(argv[1]);
+	numb = _atoi(argv[2]);
+	muti = numa * numb;
 
-	printf("%d\n", mult);
+	printf("%d\n", muti);
 
 	return (0);
 }
