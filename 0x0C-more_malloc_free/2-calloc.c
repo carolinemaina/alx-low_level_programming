@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 char *mem(char *m, char c, unsigned int n);
 
