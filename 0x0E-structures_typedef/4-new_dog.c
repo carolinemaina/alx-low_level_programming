@@ -5,10 +5,11 @@ int strleng(char *s);
 char *strcopy(char *dest, char *src);
 
 /**
- * new_dog - creates new dog
+ * *new_dog - creates new dog
  * @name: of the dog
  * @age: of the dog
  * @owner: of the dog
+ * Return: copy of dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -45,8 +46,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 }
 
 /**
- * strlen - returns length of a string
- * s: given string
+ * strleng - returns length of a string
+ * @s: given string
  * Return: length
  */
 int strleng(char *s)
@@ -69,6 +70,7 @@ int strleng(char *s)
 char *strcopy(char *dest, char *src)
 {
 	int len, a;
+
 	len = 0;
 
 	while (src[len] != '\0')
