@@ -11,8 +11,10 @@
 int main(int argc, char *argv[])
 {
 	int byte;
-	char *a;
 	int i;
+	unsigned char opc;
+
+	int (*adrs)(int, char **) = main;
 
 	if (argc != 2)
 	{
@@ -28,16 +30,18 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	a = (char *)main;
-
 	for (i = 0; i < byte; i++)
 	{
+		opc = *(unsigned char *)adrs;
+		printf("%.2x", opc);
+
 		if (i == byte - 1)
-		{
-			printf("%.2x\n", a[i]);
-			break;
-		}
-		printf("%.2x", a[i]);
+			continue;
+		
+		printf(" ");
+		adrs++;
 	}
+	printf("\n");
+
 	return (0);
 }
