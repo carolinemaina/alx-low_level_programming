@@ -1,7 +1,6 @@
 #ifndef CALC_H
 #define CALC_H
 
-int main(int __attribute__((__unused__)) argc, char *argv[]);
 int (*get_op_func(char *s))(int, int);
 int op_add(int a, int b);
 int op_sub(int a, int b);
