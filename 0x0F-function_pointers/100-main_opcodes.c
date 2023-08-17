@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * main -a program that prints the opcodes of its own main function
+ * main - a program that prints the opcodes of its own main function
  * @argc: total arguments
  * @argv: array of arguments
  * Return: Always 0 (success)
