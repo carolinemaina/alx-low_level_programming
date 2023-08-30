@@ -5,6 +5,7 @@
  * @head: first element in list
  * Return: 0 if empty
  */
+
 int pop_listint(listint_t **head)
 {
 	listint_t *buff;
@@ -15,7 +16,7 @@ int pop_listint(listint_t **head)
 
 	data = (*head)->n;
 	buff = (*head)->next;
-	free(head);
+	free(*head);
 	*head = buff;
 
 	return (data);
