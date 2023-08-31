@@ -9,38 +9,20 @@
 void print_binary(unsigned long int n)
 {
 	int printed = 0;
+	int i;
 	unsigned long int bits;
 
-	bits = n >> 63;
-
-	if (bits & 1)
+	for (i = 63; i >= 0; i--)
 	{
-		_putchar('1');
-		printed++;
-	}
-
-	bits = n << 1;
-
-	if (!bits && !printed)
-	{
-		_putchar('0');
-	}
-
-	if (bits)
-	{
-		while (bits)
+		bits = n >> i;
+		if (bits & 1)
 		{
-			if (bits & (1UL << 63))
-			{
-				_putchar('1');
-				printed++;
-			}
-			else if
-				(printed)
-				{
-					_putchar('0');
-				}
-			bits <<= 1;
+			_putchar('1');
+			printed++;
 		}
+		else if (printed)
+			_putchar('0');
 	}
+	if (!printed)
+		_putchar('0');
 }
