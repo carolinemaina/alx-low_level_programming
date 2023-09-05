@@ -18,16 +18,16 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	buffer = create_buffer(argv[2]);
+	buffer = buff(argv[2]);
 	file_from = open(argv[1], O_RDONLY);
-	re = read(from, buffer, 1024);
+	re = read(file_from, buffer, 1024);
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
 		if (file_from == -1 || re == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			free(buffeer);
+			free(buffer);
 			exit(98);
 		}
 
@@ -63,4 +63,23 @@ void close_f(int fd, const char *filename)
 		dprintf(STDERR_FILENO, "Error: Can't close file %s\n", filename);
 		exit(100);
 	}
+}
+
+/**
+ * buff - allocates 1024 bytes for buffer
+ * @f: file buffer is storing in
+ * Return: pointer to buffer
+ */
+
+char *buff(char *f)
+{
+	char *buffer;
+
+	buffer = malloc(sizeof(char) * 1024);
+	if (buffer == NULL)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", f);
+		exit(99);
+	}
+	return (buffer);
 }
