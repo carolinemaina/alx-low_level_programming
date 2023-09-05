@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	buffer = buff(argv[2]);
 	file_from = open(argv[1], O_RDONLY);
 	re = read(file_from, buffer, 1024);
-	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 664);
 
 	do {
 		if (file_from == -1 || re == -1)
