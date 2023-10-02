@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	buff = buff_mem(argv[2]);
 	from = open(argv[1], O_RDONLY);
 	re = read(from, buff, 1024);
-	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 664);
 
 	if (re > 0)
 	{
