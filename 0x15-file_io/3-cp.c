@@ -27,26 +27,20 @@ int main(int argc, char *argv[])
 	{
 		if (from == -1 || re == -1)
 		{
-			dprintf(STDERR_FILENO,
-				"Error: Can't read from file %s\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			free(buff);
 			exit(98);
 		}
-
 		wr = write(to, buff, re);
 		if (to == -1 || wr == -1)
 		{
-			dprintf(STDERR_FILENO,
-				"Error: Can't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(buff);
 			exit(99);
 		}
-
 		re = read(from, buff, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
-
 	}
-
 	free(buff);
 	fd_close(from);
 	fd_close(to);
