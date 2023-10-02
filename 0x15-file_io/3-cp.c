@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 		}
 		re = read(from, buff, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
-	} while (re > 0)
+	} while (re > 0);
 	free(buff);
 	fd_close(from);
 	fd_close(to);
