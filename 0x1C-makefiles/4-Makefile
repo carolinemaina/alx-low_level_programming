@@ -5,7 +5,7 @@ OBJ = $(SRC:.c=.o)
 NAME = school
 RM = rm -f
 
-.o: .c
+SRC:
 	$(CC) $(CFLAGS) -c -o
 
 all: $(OBJ)
